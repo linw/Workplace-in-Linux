@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Foo	Foo.cpp	/^Foo::Foo(int i){$/;"	f	class:Foo	signature:(int i)
+Foo	Foo.h	/^    Foo(int i);$/;"	p	class:Foo	access:public	signature:(int i)
+Foo	Foo.h	/^class Foo{$/;"	c
+Foo::Foo	Foo.cpp	/^Foo::Foo(int i){$/;"	f	class:Foo	signature:(int i)
+Foo::Foo	Foo.h	/^    Foo(int i);$/;"	p	class:Foo	access:public	signature:(int i)
+Foo::i	Foo.h	/^    int i;$/;"	m	class:Foo	access:private
+Foo::print	Foo.cpp	/^void Foo::print(){$/;"	f	class:Foo	signature:()
+Foo::print	Foo.h	/^    void print();$/;"	p	class:Foo	access:public	signature:()
+_CPP_PRIMER_CHAPER9_FOO_H	Foo.h	9;"	d
+i	Foo.h	/^    int i;$/;"	m	class:Foo	access:private
+main	96.cpp	/^int main()$/;"	f	signature:()
+print	Foo.cpp	/^void Foo::print(){$/;"	f	class:Foo	signature:()
+print	Foo.h	/^    void print();$/;"	p	class:Foo	access:public	signature:()
+showFun	96.cpp	/^void showFun(){$/;"	f	signature:()
