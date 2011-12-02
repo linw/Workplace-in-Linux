@@ -24,6 +24,7 @@ void showFun(){
 int main()
 {
     showFun(); 
+    Foo a;
     return 0;
 }
 

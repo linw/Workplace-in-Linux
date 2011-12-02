@@ -1,0 +1,8 @@
+*.[0a]
+tags
+*.exe
+*.so
+*.diff
+*.dep
+*.gz
+*.out

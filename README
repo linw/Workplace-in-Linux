@@ -2,4 +2,5 @@ This is my workplace for my program code in fedora(linux).
 I will learn how to write program in linux using VIM, and want to do something coding which can run in linux.
 Also I want to learn some program Languages like Lisp, Python, C++, Ruby, Shell, and so on.
 After maybe 1 year, I will goto find jobs, and I hope I could find a good job.
-
+Ctags comment.
+ctags -R --c++-kinds=+p --fields=+iaS --extra=+q src
