@@ -33,6 +33,23 @@ void ShowResize(){
         cout<<*iter<<endl;
 
 }
+void ShowCap(){
+    vector<int> ivec;
+    cout<<"ivec size:"<<ivec.size()<<\
+        "   ||   ivec capacity:"<<ivec.capacity()<<endl;
+    ivec.push_back(0);
+    cout<<"ivec size:"<<ivec.size()<<\
+        "   ||   ivec capacity:"<<ivec.capacity()<<endl;
+    ivec.clear();
+    ivec.reserve(50);
+    for(int i = 0; i < 50; ++i)
+        ivec.push_back(i);
+    cout<<"ivec size:"<<ivec.size()<<\
+        "   ||   ivec capacity:"<<ivec.capacity()<<endl;
+    ivec.push_back(51);
+    cout<<"ivec size:"<<ivec.size()<<\
+        "   ||   ivec capacity:"<<ivec.capacity()<<endl;
+}
 int main()
 {
 //    vector<int> ivec;
@@ -41,6 +58,15 @@ int main()
 //    cout<<dvec.max_size()<<endl;
 //    vector<string> svec;
 //    cout<<svec.max_size()<<endl;
-    ShowResize();
+//    ShowResize();
+//    ShowCap();
+    string a("abcdefghijklmnopqrstuvwsyz");
+    for(string::iterator iter = a.begin();
+                         iter != a.end();
+                         ++iter)
+    {
+        cout<<*iter;
+    }
+    cout<<endl;
     return 0;
 }
