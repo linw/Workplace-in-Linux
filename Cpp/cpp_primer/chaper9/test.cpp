@@ -7,6 +7,7 @@
  */
 #include <vector>
 #include <list>
+#include <stack>
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -68,5 +69,6 @@ int main()
         cout<<*iter;
     }
     cout<<endl;
+
     return 0;
 }
