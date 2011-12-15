@@ -50,6 +50,8 @@ int main(){
     a[3] = 26;
     a[4] = 41;
     a[5] = 58;
+    
+    InsertionSortDown(a, 10);
     for(size_t i = 0; i < 10; ++i)
         cout<<a[i]<<endl;
     return 0;

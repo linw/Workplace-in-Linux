@@ -1,5 +1,5 @@
 # executable files for this directory
-OBJECTS = InsertionSort.out
+OBJECTS = InsertionSort.out MergeSort.out BubbleSort.out QuickSort.out
 
 # tells make to use the file "../GNU_makefile_template", which
 # defines general rules for making .o and .exe files
