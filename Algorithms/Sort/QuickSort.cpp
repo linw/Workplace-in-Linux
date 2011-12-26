@@ -4,9 +4,9 @@
  * E-mail: kinglw8729@gmail.com
  * Date: 2011-12-14
  * Description: Quick sort algorithms.
- *
  */
 #include <iostream>
+#include <list>
 using namespace std;
 // Swap two value.
 void ExChange(int &a, int &b){
@@ -29,7 +29,7 @@ int Partition(int *array, const int left, const int right){
             --j;
             continue;
         }
-        ExChange(array[i], array[j]);
+        ExChange(array[i+1], array[j]);
         i++;
         j--;
     }
@@ -45,7 +45,6 @@ void QuickSort(int *array, const int left, const int right){
         QuickSort(array,left,i-1);
         QuickSort(array,i+1,right);
     }
-    return;
 }
 
 int main()

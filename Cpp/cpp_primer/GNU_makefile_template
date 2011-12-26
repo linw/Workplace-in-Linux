@@ -54,3 +54,7 @@ clean:
 # target to remove executable files as well as object and core files
 clobber: clean
 	rm -rf *.out 
+
+# target to create tags file
+tags:
+	ctags -R --c++-kinds=+p --fields=+iaS --extra=+q  

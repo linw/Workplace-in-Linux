@@ -9,3 +9,5 @@ clean:
 clobber: 
 	cd Sort; make clobber 
 
+tags:
+	cd Sort; make tags

@@ -6,3 +6,4 @@ tags
 *.dep
 *.gz
 *.out
+*.o
