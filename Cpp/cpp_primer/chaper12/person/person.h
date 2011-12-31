@@ -16,10 +16,16 @@
 #include <string>
 class Person{
 private:
-    std::string name;
-    std::string address;
+  std::string name;
+  std::string address;
 public:
-    Person(): name("null"), address("null") { }
-    
-}
+  Person(const std::string _name="null", const std::string _address= "null")
+    : name(_name), address(_address) { };
+  virtual ~Person() { };
+  bool print_info(); 
+  bool modify_info(const std::string _name,
+                   const std::string _address);
+  const std::string get_name();
+  const std::string get_address();
+};
 #endif
