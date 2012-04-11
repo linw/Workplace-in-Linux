@@ -10,13 +10,16 @@
  *
  * =====================================================================================
  */
-##ifndef  _CHAPER13_SMART_POINT_H
+#ifndef  _CHAPER13_SMART_POINT_H
 #define _CHAPER13_SMART_POINT_H
+#include <iostream>
+using namespace std;
 class Smart_Ptr
 {
+    friend class Has_smart_point;
     int *ip;
     size_t use;
-    Smart_Ptr(int *ip): ip(p), use(1){ };
-    virtual ~Smart_Ptr();    
+    Smart_Ptr(int *ip): ip(ip), use(1){}
+    virtual ~Smart_Ptr(){ delete ip;}
 };
 #endif

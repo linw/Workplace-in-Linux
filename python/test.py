@@ -16,6 +16,7 @@
 #=============================================================================
 '''
 print "linv"
+import this
 raw_input("Press Enter to Exit!")
 #print i
 # reload(this)
@@ -29,3 +30,4 @@ print math.pi
 import random
 print random.random()*100%100
 print random.random()
+

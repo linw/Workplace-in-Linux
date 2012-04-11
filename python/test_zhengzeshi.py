@@ -18,12 +18,17 @@
 
 def main():
     import re
-    match = re.match('Hello[ \t]*(.*)world (.*)', 'Hello     Python python world python')
-    print match.groups()
-    m = [1,2,3,4,6,5,9]
-    m.sort()
-    m.reverse()
-    print m
+    p = re.compile('''{{infobox [\s\S]* }}''')
+    m = p.search('''asdsad{{infobox sldfjsld
+        sdjflsdjfl
+        sdfjlsdjflsjdf
+        sdjflsjdflsjdf
+        fsldjfl}}sdf
+        }}''')
+    print m.group()
+    p = re.compile('''(?:\(?(?:[\w]+|\(?)\+(?:[\w]+|\)?)\)?)+''') 
+    m = p.search('''sjdfl(a+(a+(a+b))+c)skjdjf''')
+    print m.group()
     pass
 
 if __name__ == '__main__':
