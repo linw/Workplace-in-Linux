@@ -20,6 +20,17 @@ union K{
     double k;
     char c;
 };
+class AA{
+public:
+    virtual void print(){cout<<"king"<<endl;}
+    virtual void print1(){cout<<"king"<<endl;}
+};
+
+class BB:public AA{
+public:
+    void print(){cout<<"BB"<<endl;}
+    virtual void print2(){cout<<"BB1"<<endl;}
+};
 
 // struct S {
 //     int i;
@@ -80,12 +91,15 @@ int main()
     // printf("%d %d\n", *(a + 1), *(ptr -1));
 
 
-    A a;
-    a.i = 10;
-    B b;
-    b.i = 20;
-    cout<<hex<<&A::i<<endl;
-    cout<<hex<<&B::i<<endl;
+    // A a;
+    // a.i = 10;
+    // B b;
+    // b.i = 20;
+    // cout<<hex<<&A::i<<endl;
+    // cout<<hex<<&B::i<<endl;
+    AA a;
+    cout<<sizeof(a)<<endl;
+    cout<<sizeof(BB)<<endl;
 
 
 
