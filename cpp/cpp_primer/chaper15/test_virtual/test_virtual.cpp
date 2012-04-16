@@ -57,6 +57,8 @@ int main()
     void (*fun)() = (void (*)())((void*)ptr2);
     cout<<sizeof(fun)<<endl;
     cout<<"fun dir: "<<hex<<(void*)fun<<endl;
+    assert(false);
+    cout<<"hello"<<endl;
 
 
 

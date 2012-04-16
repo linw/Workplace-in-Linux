@@ -77,8 +77,8 @@ int Fibonacci_s(int n){
 int main()
 {
     _count = 0;
-    cout<<Fibonacci(10)<<"  count:"<<_count<<endl;
+    cout<<Fibonacci(10) << "  count:" << _count << endl;
     _count = 0;
-    cout<<Fibonacci_s(10)<<"  count:"<<_count<<endl;
+    cout<<Fibonacci_s(10) << "  count:" << _count << endl;
     return 0;
 }
