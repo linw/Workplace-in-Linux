@@ -74,11 +74,42 @@ int Fibonacci_s(int n){
     return fn;
 }
 
+bool _is_space(const char& c){
+    if(c == ' ' || c == '\t' || c == '\n')
+        return true;
+    else return false;
+}
+bool _is_digit(const char& c){
+    if(c<='9'&&c>='0')
+        return true;
+    return false;
+}
+long my_atoi(const char* str){
+    int flag = 1;
+    long sum = 0;
+    while(_is_space(*str)){
+        ++str;
+    }
+    if(*str == '-') {flag = -1;str++;}
+    else if(*str == '+') {flag = 1;str++;}
+    else if(*str >'9' ||*str < '0'){
+        sum = 0;
+        return sum;
+    }
+    while(_is_digit(*str)){
+        sum = sum*10 + *str - '0';
+        ++str;
+    }
+    if(*str != '\0') sum = 0;
+    return flag>0?sum:-sum;
+}
+
 int main()
 {
-    _count = 0;
-    cout<<Fibonacci(10) << "  count:" << _count << endl;
-    _count = 0;
-    cout<<Fibonacci_s(10) << "  count:" << _count << endl;
+    // _count = 0;
+    // cout<<Fibonacci(10) << "  count:" << _count << endl;
+    // _count = 0;
+    // cout<<Fibonacci_s(10) << "  count:" << _count << endl;
+    cout<<my_atoi("\n \t-12as310")<<endl;
     return 0;
 }

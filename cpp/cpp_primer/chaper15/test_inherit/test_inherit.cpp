@@ -15,21 +15,26 @@ using namespace std;
 class A{
 public:
     A(int _i){cout<<"A()"<<endl; i = _i;}
+    virtual void print()= 0;
+    // A(){ i = 1; };
+    // int i;
+protected:
     int i;
-private:
-    int ii;
 };
 class B:public A{
 public:
-    B():A(10){cout<<"B()"<<endl;}
+    B(int val):A(i+val){cout<<"B()"<<endl;}
+    virtual void print(){ cout<<"B_print()"<<endl;}
 private:
     // int i;
     // int ii;
 };
 int main()
 {
-    A* p = new B();
-    cout<<p->i<<endl;
+    A* p = new B(5);
+    // p->print(10);
+    p->print();
+    // cout<<p->i<<endl;
     cout<<sizeof(B)<<endl;
     return 0;
 }
