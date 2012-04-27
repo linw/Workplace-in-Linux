@@ -22,6 +22,8 @@ public:
   std::string publisher;
   Book();
   Book(std::string _name, std::string _author, std::string _isbn, std::string publisher);
+  Book(std::string _name);
+  Book(std::istream _is);
   virtual ~Book();
 }
 #endif
