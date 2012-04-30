@@ -17,32 +17,28 @@ void ExChange(int &a, int &b){
 
 int Partition(int array[], const int left, const int right){
     int tmp = array[right];
-    int l = left;
-    int r = right-1;
-    while(l<r){
-        if(tmp<array[l]){
-            ExChange(array[l],array[r]);
-            --r;
-            continue;
-        }
+    int l = left-1;
+    int r = left;
+    while(r<right){
         if(tmp>array[r]){
-            ExChange(array[l],array[r]);
-            ++l;
-            continue;
+            if(l+1!=r)
+                ExChange(array[l+1],array[r]);
+            ++l;            
         }
-    }
-    ExChange(array[r],array[right]);
-    return r;
-
+        ++r;
+    } 
+    if(l+1!=r)
+        ExChange(array[l+1],array[right]);
+    return l+1;
 }
 
-void QuickSort(int *array, const int left, const int right){
-    if(left < right)
+void QuickSort(int *array, const int n){
+    if(n>0)
     {
-        int i = Partition(array,left,right);
+        int i = Partition(array,0,n-1);
 //        cout<<"int i = Partition(array,left,right)"<<i<<endl;
-        QuickSort(array,left,i-1);
-        QuickSort(array,i+1,right);
+        QuickSort(array,i);
+        QuickSort(array+i+1,n-1-i);
     }
 }
 
@@ -51,11 +47,11 @@ int main()
     int array[10] = {0,1,2,3,4,5,6,7,8,9};
     int array1[10] = {9,8,7,6,5,4,3,2,1,0};
     int array2[10] = {6,8,2,9,5,0,3,7,1,4};
-    // QuickSort(array,0,9);
-    QuickSort(array2,0,9);
-    // Partition(array2, 0, 9);
+    QuickSort(array1,10);
+    QuickSort(array2,10);
+    Partition(array2,0,9);
     for(int i = 0; i<10; ++i)
-        cout<<array2[i]<<endl;
+        cout<<array1[i]<<endl;
 //    for(int i = 0; i<10; ++i)
 //        cout<<array[i]<<endl;
     return 0;
