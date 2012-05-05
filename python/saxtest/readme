@@ -1,0 +1,26 @@
+infobox
+$ python main.py K:\enwiki-latest-pages-articles.xml
+Document Start ... Document End ... 49568.3468179
+
+2012-4-24 15:59:19
+$ python main.py E:\\zhwiki-latest-pages-articles.xml
+Document Start ... Document End ... 902.335154719
+data_zh.dat
+
+2012-4-24 16:43:25
+Document Start ... Document End ... 885.300466203
+data_zh.dat    1932
+
+
+
+2012-4-25 9:32:24
+$ python main.py k:\\enwiki-latest-pages-articles.xml
+Document Start ... Document End ... 43347.9190614
+data_en.dat    48317
+
+
+
+defination
+$ python get_first_sec.py k:\\enwiki-latest-pages-articles.xml
+Document Start ... Document End ... 4797.96656409
+data_en.dat    12035917
