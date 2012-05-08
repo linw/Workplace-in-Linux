@@ -1,9 +1,9 @@
-Exception: STATUS_ACCESS_VIOLATION at eip=00401584
-eax=00000009 ebx=61245C06 ecx=005002D0 edx=00000000 esi=61245C0C edi=00000000
-ebp=0022CD68 esp=0022CC80 program=C:\Documents and Settings\Administrator\Workplace-in-Linux\Cpp\a.exe, pid 3684, thread main
+Exception: STATUS_ACCESS_VIOLATION at eip=004010D0
+eax=0000000A ebx=00000000 ecx=20000037 edx=00000000 esi=6127C1B4 edi=6119FE7F
+ebp=0022AC98 esp=0022AC70 program=C:\Documents and Settings\Administrator\Workplace-in-Linux\C&Cpp\a.exe, pid 1692, thread main
 cs=001B ds=0023 es=0023 fs=003B gs=0000 ss=0023
 Stack trace:
 Frame     Function  Args
-0022CD68  00401584  (00000001, 61243C1C, 005000F8, 61004BB9)
-0022CD98  61007038  (00000000, 0022CDD4, 61006980, 7FFDA000)
+0022AC98  004010D0  (00000001, 0022ACC0, 20010100, 6127A83E)
+0022AD28  610070D8  (00000000, 0022CDA8, 610066D0, 00000000)
 End of stack trace
