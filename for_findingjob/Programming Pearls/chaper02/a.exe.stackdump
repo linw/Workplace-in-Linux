@@ -1,0 +1,9 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=00401108
+eax=0022AC90 ebx=0022ACC5 ecx=0022ACC5 edx=00FFFFCA esi=0022ACC5 edi=0022ACC5
+ebp=0022AC48 esp=0022AC20 program=E:\findjob\program\Programming Pearls\chaper02\a.exe, pid 3264, thread main
+cs=001B ds=0023 es=0023 fs=003B gs=0000 ss=0023
+Stack trace:
+Frame     Function  Args
+0022AC48  00401108  (0022AC90, 00000000, 00FFFFFF, 3CA82761)
+0022AC68  0040117C  (3EA82761, 00010120, C0AC2200, 01000000)
+End of stack trace

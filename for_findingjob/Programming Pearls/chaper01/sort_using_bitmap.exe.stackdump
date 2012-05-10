@@ -1,0 +1,9 @@
+Exception: STATUS_STACK_OVERFLOW at eip=004012BF
+eax=001D9944 ebx=00000000 ecx=00032C94 edx=00000001 esi=61279AA4 edi=6119FE7F
+ebp=0022AC98 esp=0022AC8C program=E:\findjob\program\Programming Pearls\chaper01\sort_using_bitmap.exe, pid 2460, thread main
+cs=001B ds=0023 es=0023 fs=003B gs=0000 ss=0023
+Stack trace:
+Frame     Function  Args
+0022AC98  004012BF  (00000001, 0022ACC0, 20010100, 6127C1B6)
+0022AD28  610070D8  (00000000, 0022CDA8, 610066D0, 00000000)
+End of stack trace
