@@ -22,7 +22,7 @@ void Merge(int *array, size_t p, size_t q, size_t r){
        L[i] = array[p+i];
    for(i = 0; i != n2; ++i)
        R[i] = array[q+1+i];
-   L[n1] = R[n2] = INT_MAX; 
+   L[n1] = R[n2] = INT_MAX;
    i = j = 0;
    for(int k = p; k != r + 1; ++k){
        if(L[i] <= R[j]){
@@ -43,7 +43,7 @@ void MergeSort(int *array, size_t p, size_t r){
         MergeSort(array, p, q);
         MergeSort(array, q+1, r);
         Merge(array, p, q, r);
-    }    
+    }
 }
 int main()
 {

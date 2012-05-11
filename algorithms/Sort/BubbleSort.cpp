@@ -19,7 +19,7 @@ void BubbleSort(int *array, size_t length){
               array[j] = array[j-1]^array[j];
               array[j-1] = array[j-1]^array[j];
           }
-      } 
+      }
    }
 }
 int main()
