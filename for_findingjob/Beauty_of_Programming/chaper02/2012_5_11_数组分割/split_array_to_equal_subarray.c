@@ -14,4 +14,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+// solution1: 利用动态规划，其实只要计算n个数组的和和sum/2比较就可以
+void split_array_to_equal_subarray_1(int *a, int n, int *sub_1,int *sub_2){
+  long sum;
+  int i,j;
+  sum = 0;
+  for(i = 0; i < n; ++i)
+    sum += a[i];
+  sum /= 2;
 
+}
+main()
+{
+  int a[] = {1,2,3,4,5,6,7,8,9,10};
+  int *sub_1;
+  int *sub_2;
+  sub_1 = (int*)malloc(sizeof(int)*5);
+  sub_2 = (int*)malloc(sizeof(int)*5);
+  split_array_to_equal_subarray_1(a,10,sub_1,sub_2);
+  free(sub_1);
+  free(sub_2);
+}

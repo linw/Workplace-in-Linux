@@ -1,19 +1,19 @@
 /*
  * =====================================================================================
  *
- *       Filename:    test.c
+ *       Filename:    test_array.c
  *       Author:      linwei
  *       E-mail:      kinglw8729@gmail.com
- *       Created:     2011年12月26日 10时56分31秒
+ *       Created:     2012-5-12 12:53:29
  *       Compiler:    gcc
- *       Description: 
+ *       Description:
  *
  * =====================================================================================
  */
-#include "stdio.h"
+#include <stdio.h>
+#include <stdlib.h>
 main()
 {
-    int a[10] = {1,2,3,4,5,6,7,8,9,0};
-    printf("%d",2[a]);
-
+  char a[] = "abcdefghijk";
+  printf("%c\n","abcdefg"[2]);
 }
