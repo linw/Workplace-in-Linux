@@ -49,7 +49,7 @@ void print_tree(const Tree& root){
     n_lin++;
     int i = 0;
     while(i++<n_lin)
-        cout<<" "; 
+        cout<<" ";
     cout<<root->data<<endl;
     print_tree(root->left);
     print_tree(root->right);
@@ -57,26 +57,45 @@ void print_tree(const Tree& root){
 
 
 
-bool verify_squence_of_BST(int a[], const Tree& t, const int size_a, int& i){
-    
+bool verify_squence_of_BST(int squence[],int length){
+  if(squence == NULL||length<=0)
+    return false;
+  // root of a BST is at the end of post order traversal squence
+  int root = squence[length-1];
+
+  // the nodes in left sub-tree less than the root
+  int i = 0;
+  for(;i<length-1;++i)
+    if(squence[i]>root)
+      break;
+  int j = i;
+  for(;j<length-1;++j)
+    if(squence[j]<root)
+      return false;
+
+  // verify whether the left sub-tree is a BST
+  bool left = true;
+  if(i>0)
+    left = verify_squence_of_BST(squence,i);
+
+  // verify whether the right sub-tree is a BST
+  bool right = true;
+  if(i<length-1)
+    right = verify_squence_of_BST(squence+i,length-i-1);
+  return (left&&right);
 }
 
 int main()
 {
     Tree root = NULL;
-    create_tree(root);
-    int a[3] = {5,7,6};
+    //    create_tree(root);
+    int a[] = {5,7,6,9,11,10,8};
     int i = 0;
+    if(verify_squence_of_BST(a,7))
+       cout<<"yes"<<endl;
     // bool flag = verify_squence_of_BST(a,root,3,i);
     // if(flag) cout<<"hello world"<<endl;
-    print_tree(root);
-    destory_tree(root);
+    //    print_tree(root);
+    //    destory_tree(root);
     return 0;
 }
-// #include "stdio.h"
-// main()
-// {
-//     char a[] = "\"Blunder\?\?!\?\?\"";
-//     printf("%s\n", a);
-//     return 0;
-// }
