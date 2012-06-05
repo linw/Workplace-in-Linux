@@ -1,0 +1,10 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=00401493
+eax=00000002 ebx=00000000 ecx=611856C0 edx=0022AC3C esi=6127CE08 edi=00000000
+ebp=0022AC28 esp=0022ABE0 program=C:\Documents and Settings\linv\Documents\Workplace-in-Linux\C&Cpp\pointers_on_c\chaper07\a.exe, pid 5868, thread main
+cs=001B ds=0023 es=0023 fs=003B gs=0000 ss=0023
+Stack trace:
+Frame     Function  Args
+0022AC28  00401493  (004020A6, 0000009A, 00000002, 00000003)
+0022AC68  004015B5  (00000001, 0022AC90, 20010100, 6127CEBA)
+0022ACF8  61007128  (00000000, 0022CD78, 61006720, 00000000)
+End of stack trace
