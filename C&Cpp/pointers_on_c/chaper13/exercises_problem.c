@@ -5,7 +5,7 @@
  *       Author:      linwei
  *       E-mail:      kinglw8729@gmail.com
  *       Created:     2012-6-6 21:54:42
- *       Last Edit:   
+ *       Last Edit:
  *       Compiler:    gcc
  *       Description: exercises in chaper13
  *
@@ -138,5 +138,4 @@ main()
   sort(a,10,sizeof(int),comparator);
   for(i = 0; i < 10; ++i)
     printf("%d ",a[i]);
-  printf("\n");
 }
