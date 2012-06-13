@@ -1,0 +1,13 @@
+--2012-06-11 11:36:19--  http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.7/chs/AdobeReader_chs-8.1.7-1.i486.rpm
+正在解析主机 ardownload.adobe.com... 124.40.51.24, 124.40.51.80
+正在连接 ardownload.adobe.com|124.40.51.24|:80... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度：62230770 (59M) [audio/x-rpm]
+正在保存至: “AdobeReader_chs-8.1.7-1.i486.rpm”
+
+ 0% [                                   ] 485,281     13.0B/s eta(英国中部时间) 13d 19h 0% [                                   ] 524,561     17.2B/s   in 2h 36m  
+
+2012-06-11 14:12:47 (55.9 B/s) - 在 524561/62230770 字节处发生读取错误 (Connection reset by peer)。重试中。
+
+--2012-06-11 14:12:48--  (尝试次数： 2)  http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.7/chs/AdobeReader_chs-8.1.7-1.i486.rpm
+正在连接 ardownload.adobe.com|124.40.51.24|:80... 
