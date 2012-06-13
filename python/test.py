@@ -25,9 +25,12 @@ reload(this)
 L = [1,2]
 L.append(L)
 print L
+for a in L:
+  print a
 import math
 print math.pi
 import random
 print random.random()*100%100
 print random.random()
-
+for i in range(100):
+  print i,

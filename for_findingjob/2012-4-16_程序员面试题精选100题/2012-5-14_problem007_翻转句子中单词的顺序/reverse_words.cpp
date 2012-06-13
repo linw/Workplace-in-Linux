@@ -48,7 +48,7 @@ char* reverse_sentence(char* str)
     if(str[i] == ' '||str[i] == '\0'){
       reverse(str+start,i-start);
       start = i+1;
-      cout<<str+start<<endl;
+      //     cout<<str+start<<endl;
     }
   }
   reverse(str,n);

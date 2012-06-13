@@ -35,7 +35,7 @@ void print_line(FILE *in, FILE *out)
 }
 
 
-// problem 4: 
+// problem 4:
 
 main()
 {
