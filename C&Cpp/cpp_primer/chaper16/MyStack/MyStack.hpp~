@@ -53,7 +53,7 @@ void Stack<Type>::push(const Type& e){
     tmp->next = stack;
     stack = tmp;
 }
-template <class Type>
+template <class Type> 
 Type Stack<Type>::pop(){
     Type e = stack->data;
     Node<Type>* tmp = NULL;

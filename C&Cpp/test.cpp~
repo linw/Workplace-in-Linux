@@ -38,11 +38,6 @@ public:
 // };
 int A::i = 0;
 // int B::i = 0;
-
-int fun(std::string s)
-{
-  cout<<s.c_str()<<endl;
-}
 int main()
 {
     // // cout<<sizeof(A)<<endl;
@@ -105,14 +100,9 @@ int main()
     AA a;
     cout<<sizeof(a)<<endl;
     cout<<sizeof(BB)<<endl;
-    char *p = "Hello world!!!";
-    string s = string(p);
-    cout<<s.c_str()<<endl;
-    //  fun("hello");
-    fun(s);
 
 
-    
+
 
     return 0;
 }
