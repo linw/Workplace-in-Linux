@@ -43,7 +43,7 @@ class Decorator:public Component
 public:
   Decorator(Component* comp):component(comp) { };
   virtual ~Decorator() { };
-private:
+ public:
   Component* component;
 public:
   void setComponent(Component* comp){ component = comp;};
@@ -60,28 +60,38 @@ void Decorator::operation()
 class ConceteDecoratorA:public Decorator
 {
 public:
-  ConceteDecoratorA();
-  virtual ~ConceteDecoratorA();
+  ConceteDecoratorA(Component* comp):Decorator(comp){};
+  virtual ~ConceteDecoratorA(){};
 public:
   virtual void operation();
 };
 void ConceteDecoratorA::operation()
 {
+  component->operation();
   cout<<"ConceteDecoratorA\n";
 }
 
 
-class ConceteDecoratorABpublic Decorator
+class ConceteDecoratorB:public Decorator
 {
 public:
-  ConceteDecoratorB();
-  virtual ~ConceteDecoratorB();
+  ConceteDecoratorB(Component* comp):Decorator(comp){};
+  virtual ~ConceteDecoratorB(){};
 public:
   virtual void operation();
+private:
+  void AddedBehavior();
 };
+
 void ConceteDecoratorB::operation()
 {
+  component->operation();
   cout<<"ConceteDecoratorA\n";
+  AddedBehavior();
+}
+void ConceteDecoratorB::AddedBehavior()
+{
+  cout<<"AddedBehavior\n";
 }
 
 
@@ -89,9 +99,11 @@ void ConceteDecoratorB::operation()
 int main()
 {
   Component* p1 = new ConcreteComponent();
-  Component* p2 = new ConceteDecoratorA();
-  Component* p3 = new ConceteDecoratorB();
-
-
-
+  Component* p2 = new ConceteDecoratorA(p1);
+  Component* p3 = new ConceteDecoratorB(p2);
+  Component* p4 = new ConceteDecoratorB(p3);
+  //  p1->operation();
+  //  p2->operation();
+  //  p3->operation();
+  p4->operation();
 }

@@ -1,0 +1,7 @@
+./testTinyxml.cpp
+./tinyxml.h
+./tinystr.cpp
+./tinyxml.cpp
+./tinystr.h
+./tinyxmlerror.cpp
+./tinyxmlparser.cpp

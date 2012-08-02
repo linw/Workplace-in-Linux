@@ -18,4 +18,10 @@ typedef struct SparseMatrix{
   int col[201];
 }SparseMatrix;
 
-
+main()
+{
+  int i;
+  for(i = 0; i < 100; ++i)
+    printf("%d\n",i);
+  printf("Hello\n");
+}
