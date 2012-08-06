@@ -1,12 +1,13 @@
 /*
  * =====================================================================================
  *
- *       Filename:    abstract_factory.cpp
+ *       Filename:    observer.cpp
  *       Author:      linwei
  *       E-mail:      kinglw8729@gmail.com
- *       Created:     2012-08-06 16:21:53
+ *       Created:     2012-08-05 23:11:40
  *       Last Edit:   
  *       Compiler:    gcc
  *       Description: 
  * =====================================================================================
  */
+

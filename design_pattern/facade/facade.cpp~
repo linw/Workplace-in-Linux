@@ -1,0 +1,37 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:    facade.cpp
+ *       Author:      linwei
+ *       E-mail:      kinglw8729@gmail.com
+ *       Created:     2012-08-04 20:49:55
+ *       Last Edit:   
+ *       Compiler:    gcc
+ *       Description: 
+ *
+ * =====================================================================================
+ */
+
+#include <iostream>
+using std::endl;
+using std::cout;
+
+class SubSystemOne
+{
+public:
+  SubSystemOne(){};
+  SubSystemOne(const SubSystemOne& _sso){};
+  virtual ~SubSystemOne(){};
+public:
+  void MethodOne();
+};
+
+class SubSystemTwo
+{
+public:
+  SubSystemTwo(){};
+  SubSystemTwo(const SubSystemOne& _sst){};
+  virtual ~SubSystemTwo(){};
+public:
+  void MethodTwo();
+};
