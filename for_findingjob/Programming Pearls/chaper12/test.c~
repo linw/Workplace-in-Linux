@@ -1,0 +1,40 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:    test.c
+ *       Author:      linwei
+ *       E-mail:      kinglw8729@gmail.com
+ *       Created:     2012-08-02 17:52:37
+ *       Last Edit:   2012-08-10 11:50:46
+ *       Compiler:    gcc
+ *       Description: something in chaper 12,取样问题
+ *
+ * =====================================================================================
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <iostream>
+#include <set>
+using std::cout;
+using std::endl;
+using std::set;
+
+int bigrand()
+{
+  return RAND_MAX*rand() + rand();
+}
+
+
+// 用于取样的函数,从n个数中选取m个样本
+void genknuth(int m, int n)
+{
+  
+}
+
+
+int main()
+{
+  return 0;
+}
+

@@ -1,0 +1,90 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:    date_function.c
+ *       Author:      linwei
+ *       E-mail:      kinglw8729@gmail.com
+ *       Created:     2012-08-16 15:09:26
+ *       Last Edit:   
+ *       Compiler:    gcc
+ *       Description: 给定年份中的某一天,返回该天所在的月份和当月中的日子.1970.1.1 是星期四
+ * =====================================================================================
+ */
+#include <stdio.h>
+#include <time.h>
+int data[26] = {31,28,31,30,31,30,31,31,30,31,30,31,4,5,6,7,1,2,3};
+char* week_str[] = {
+  "Monday","Tuesday","Wednesday","Thusday","Friday","Saturday","Sunday"
+};
+typedef struct Month_week
+{
+  int month;
+  int week;
+}Month_week;
+
+
+Month_week date_function(int year, int day)
+{
+  int _data[] = {31,28,31,30,31,30,31,31,30,31,30,31,4,5,6,7,1,2,3};
+  int i;
+  int sum_days;
+  int flag;
+  Month_week r;
+  flag = 0;
+  sum_days = 0;
+  for(i = 0; i < year-1970; ++i){
+    sum_days += 365;
+    if(((i+1970)%4 == 0 && (i+1970)%100 !=0) || (i+1970)%400 == 0){
+      sum_days += 1;
+    }
+  }
+  if((year%4 == 0 && year%100 !=0) || year%400 == 0){
+    flag = 1;
+  }
+  if(flag) _data[1] = 29;
+  for(i = 0 ; day>_data[i] && i < 12; ++i){
+    sum_days += _data[i];
+    day -= _data[i];
+  }
+  if(i<=2) flag = 0;
+  sum_days += day + flag - 1;
+  r.month = i+1;
+  r.week = _data[sum_days%7+12];
+  if(i == 3){
+    printf("%d",day);
+  }
+  return r; 
+}
+
+int main(int argv, char* args[])
+{
+  Month_week r;
+  int i;
+  int tmp;
+  tmp = 0;
+  for(i = 0; i < 12; ++i){
+    printf("=========month %d ============",i+1);
+    r = date_function(2012,tmp+1);
+    printf("%s     ",week_str[r.week-1]);
+    if(i == 1) data[1] = 29;
+    r = date_function(2012,tmp+data[i]);
+    printf("%s\n",week_str[r.week-1]);
+    tmp += data[i];
+    if(i == 1) data[1] = 28;
+  }
+  return 0;
+  /* r = date_function(2012,); */
+  /* printf("%d\n%d\n",r.month,r.week); */
+  /* int i,j; */
+  /* int days; */
+  /* days = 1; */
+  /* for(i = 0; i < 12; ++i){ */
+  /*   printf("%dth month\n",i+1); */
+  /*   printf("Mon Tue Wed Thur Fri Sat Sun"); */
+  /*   for(j = 0; j <= data[i]; ++j,++days){ */
+  /*     r = date_function(2012,days);       */
+  /*   } */
+  /* } */
+  
+}
+

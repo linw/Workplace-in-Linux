@@ -1,0 +1,75 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:    state.cpp
+ *       Author:      linwei
+ *       E-mail:      kinglw8729@gmail.com
+ *       Created:     2012-08-10 22:34:32
+ *       Last Edit:   
+ *       Compiler:    gcc
+ *       Description: 状态模式:当一个对象的内在状态改变时容许改变其行为,这个对象看起来像是改变了其类
+ *                            主要用于
+ * =====================================================================================
+ */
+#include <iostream>
+using std::cout;
+using std::endl;
+
+class Context
+{
+public:
+  Context(State* _state){
+    state = _state;
+  }
+  Context(const Context& _c){
+    state = _c.state;
+  }
+  virtual ~Context(){}
+private:
+  State *state;
+public:
+  State* getState(){
+    return state;
+  }
+  void setState(State* _s){
+    state = _s;
+  }
+  void request(){
+    state->handle(*this);
+  }
+};
+
+
+class State
+{
+public:
+  State(){}
+  State(const State& _s){}
+  virtual ~State(){}
+public:
+  virtual void handle(Context& context) = 0;
+};
+
+class ConcreteStateA:public State
+{
+public:
+  ConcreteStateA(){}
+  ConcreteStateA(const ConcreteStateA& _csa){}
+  virtual ~ConcreteStateA(){}
+public:
+  void handle(Context& context){
+    context.state = new ConcreteStateA();
+  }
+};
+
+class ConcreteStateB:public State
+{
+public:
+  ConcreteStateB(){}
+  ConcreteStateB(const ConcreteStateB& _csb){}
+  virtual ~ConcreteStateB(){}
+public:
+  void handle(Context& context){
+    context.state = new ConcreteStateB();
+  }
+};

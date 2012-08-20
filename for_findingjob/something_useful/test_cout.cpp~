@@ -1,20 +1,27 @@
 /*
  * =====================================================================================
  *
- *       Filename:    tinyHelloWorld.c
+ *       Filename:    test_cout.cpp
  *       Author:      linwei
  *       E-mail:      kinglw8729@gmail.com
- *       Created:     2012-08-06 11:56:01
+ *       Created:     2012-08-10 10:35:19
  *       Last Edit:   
  *       Compiler:    gcc
  *       Description: 
  * =====================================================================================
  */
-char* str = "Hello world!\n";
-void print()
+#include <iostream>
+using std::cout;
+using std::endl;
+int f(int & i)
 {
-  asm("mov1 $13,%%edx \n\t"
-      "mov1 $0,%%ecx \n\t"
-      "mov1 $0,%%ebx \n\t"
-      "mov1 $4,%%eax \n\t"
-      "int $
+  i++;
+  return i;
+}
+
+int main(int argc, char* argv[])
+{
+  int x = 10;
+  cout<<x<<'\t'<<f(x)<<'\t'<<x<<endl;
+  return 0;
+}

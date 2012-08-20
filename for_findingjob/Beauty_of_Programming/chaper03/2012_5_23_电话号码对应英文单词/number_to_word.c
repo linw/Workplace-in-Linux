@@ -69,15 +69,9 @@ void number_to_word_2(const int * const a, int *answer,int n, int index){
     printf("\n");
     return;
   }
-  // for(i = 0; i < n; ++i){
-  //   printf("%c",c[a[i]][answer[i]]);
-  // }
-//  printf("Hello");
   for(answer[index] = 0; answer[index] < c_len[index]; ++answer[index])
   {
-//    printf("Hello");
     number_to_word_2(a,answer,n,index+1);
-    
   }
   for(i = 0; i < n; ++i){
     printf("%c",c[a[i]][answer[i]]);
@@ -89,10 +83,8 @@ void print_number_to_word_2(const int * const a, const int n)
   int *answer;
   int i;
   answer = (int*) malloc(sizeof(int)*n);
-//  printf("HELLO");
   for(i = 0; i < n; ++i)
     answer[i] = 0;
-//  printf("Hello");
   number_to_word_2(a,answer,n,0);
   free(answer);
 }
@@ -101,6 +93,6 @@ void print_number_to_word_2(const int * const a, const int n)
 main()
 {
   int a[] = {1,2,3,4};
-//  print_number_to_word_1(a,4);
+  // print_number_to_word_1(a,4);
   print_number_to_word_2(a,4);
 }

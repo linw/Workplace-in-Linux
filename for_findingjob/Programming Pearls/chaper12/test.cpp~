@@ -1,0 +1,76 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:    test.cpp
+ *       Author:      linwei
+ *       E-mail:      kinglw8729@gmail.com
+ *       Created:     2012-08-02 17:52:37
+ *       Last Edit:   2012-08-10 11:50:46
+ *       Compiler:    gcc
+ *       Description: something in chaper 12,取样问题
+ *
+ * =====================================================================================
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <iostream>
+#include <set>
+using std::cout;
+using std::endl;
+using std::set;
+// 用于取样的函数
+void genknuth(int m, int n)
+{
+  int i;
+  srand((unsigned) time(NULL));
+  for(i = 0; i < n; ++i){
+    if((rand()% (n-i)) < m) {
+      printf("%d\n",i);
+      --m;
+    }
+  }
+}
+
+// 生成一组无重复的随机数
+// 这种方法在m和n的值相近的时候会比较耗时,因为随机要随机到每种可能,然后正好能加进去的可能
+// 比较小,如果m>n则,程序进入死循环
+void gensets(long m, long n)
+{
+  set<int> s;
+  while(s.size() < m){
+    s.insert(rand() % n);
+  }
+  set<int>::iterator i;
+  for(i = s.begin(); i != s.end(); ++i)
+    cout<<*i<<endl;
+}
+
+
+// problem 1:实现bigrand() and randint
+int bigrand()
+{
+  return RAND_MAX*rand() + rand();
+}
+
+int randint(int l, int u)
+{
+  return bigrand()%(u-l+1) + l;
+}
+
+
+int main()
+{
+  // genknuth(50,100);
+  // time_t t;
+  // t = clock();
+  // gensets(1000000,1000000);
+  // t = clock() - t;
+  // cout<<"time use:"<<(double)t/CLOCKS_PER_SEC<<endl;
+  srand((unsigned) time(NULL));
+  cout<<RAND_MAX<<endl;
+  cout<<bigrand()<<endl;
+  cout<<randint(10,100)<<endl;
+  return 0;
+}
+
