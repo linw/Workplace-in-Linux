@@ -1,0 +1,5 @@
+
+
+def bsearch(array,key):
+  i = size(array)
+  j = 0
