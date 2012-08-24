@@ -146,7 +146,7 @@ void quick_sort1(int *array, const int l, const int r)
   int m;
   int i,j;
   int tmp;
-  ++count;
+  //  ++count;
   if(l >= r)
     return;
   m = l;
@@ -173,7 +173,8 @@ void quick_sort2(int *array, const int l, const int r)
   int tmp;
   if(l >= r)
     return;
-  m = (l+r)/2;
+  //  m = (l+r)/2;
+  m = (rand()%(r-l)+l);
   tmp = array[l];
   array[l] = array[m];
   array[m] = tmp;
@@ -223,6 +224,27 @@ void quick_sort3(int *array, const int l, const int r)
   quick_sort3(array,j+1,r);
 }
 
+
+
+// 堆排实现
+void heap(int *num, int n)
+{
+  int i,j;
+  int t;
+  i = n/2;
+  for(i = n/2; i >= 0; --i){
+    if(num[i]<num[i*2+1]){
+      t = num[i];
+      num[i] = num[i*2+1];
+      num[i*2+1] = t;
+    }
+    if(num[i]<num[i*2+2]){
+      t = num[i];
+      num[i] = num[i*2+2];
+      num[i*2+2] = t;
+    }
+  }
+}
 
 
 

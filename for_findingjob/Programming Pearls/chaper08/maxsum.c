@@ -64,6 +64,23 @@ long maxsum3(const int *num, const size_t n)
   return all;
 }
 
+long maxsum4(const int *num, const size_t n)
+{
+  int i;
+  long all,start;
+  all = start = num[n-1];
+  for(i = n-2; i >=0; --i){
+    if(num[i] < 0){
+      start = 0;
+    }
+    start += num[i];
+    if(start > all){
+      all = start;
+    }
+  }
+  return all;
+}
+
 
 void count_time(int switch_flag, int n, int num_test)
 {
