@@ -77,7 +77,7 @@ int main(){
 
     int j = 10;
     int *p = NULL;
-    const int *&q = p;
+    //   const int *&q = p;
 
     return 0;
 }
