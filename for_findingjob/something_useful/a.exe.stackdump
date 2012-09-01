@@ -1,10 +1,9 @@
-Exception: STATUS_ACCESS_VIOLATION at eip=004011A6
-eax=00000005 ebx=00000000 ecx=611856C0 edx=00000000 esi=61279D60 edi=6119FE9F
-ebp=0022AC18 esp=0022AC08 program=C:\Users\linv\Documents\Workplace-in-Linux\for_findingjob\something_useful\a.exe, pid 7192, thread main
+Exception: STATUS_ACCESS_VIOLATION at eip=004011BD
+eax=00000000 ebx=00000001 ecx=00000000 edx=00000000 esi=00000000 edi=6119FE9F
+ebp=0022AC68 esp=0022AC20 program=C:\Users\linv\Documents\Workplace-in-Linux\for_findingjob\something_useful\a.exe, pid 4056, thread main
 cs=001B ds=0023 es=0023 fs=003B gs=0000 ss=0023
 Stack trace:
 Frame     Function  Args
-0022AC18  004011A6  (0022AC34, 00000001, 0022AC68, 2D465455)
-0022AC68  0040124A  (00000001, 0022AC90, 20010100, 6127DA6A)
+0022AC68  004011BD  (00000001, 0022AC90, 20010100, 6127DA6A)
 0022ACF8  61007128  (00000000, 0022CD78, 61006720, 00000000)
 End of stack trace
