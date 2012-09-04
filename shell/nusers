@@ -1,0 +1,10 @@
+#! /bin/sh 
+who | wc -l
+ls
+myvar=this_is_a_long_string
+echo $myvar
+echo "hello $myvar \c"
+echo -e "Enter you name: \c"
+printf "Hello, world!\n"
+printf "who I love is %s" you
+
