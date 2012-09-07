@@ -1,0 +1,19 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:    rotate_contain.c
+ *       Author:      linwei
+ *       E-mail:      kinglw8729@gmail.com
+ *       Created:     2012-09-06 15:49:16
+ *       Last Edit:   
+ *       Compiler:    gcc
+ *       Description: 字符串循环包含的问题
+ * =====================================================================================
+ */
+#include <stdio.h>
+#include <string.h>
+
+int contain_str1(const char *src, const char *des)
+{
+  
+}

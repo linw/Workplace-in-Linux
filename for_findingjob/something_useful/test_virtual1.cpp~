@@ -1,0 +1,20 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:    test_virtual1.cpp
+ *       Author:      linwei
+ *       E-mail:      kinglw8729@gmail.com
+ *       Created:     2012-09-05 10:18:22
+ *       Last Edit:   
+ *       Compiler:    gcc
+ *       Description: 
+ * =====================================================================================
+ */
+#include <iostream>
+using namespace std;
+class A{
+public:
+  virtual void foo(){
+    cout<<"A foo"<<endl;
+  }
+};

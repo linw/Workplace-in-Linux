@@ -13,33 +13,55 @@
 #include <iostream>
 using namespace std;
 
-class A{
-private:
-  int i;
+// class A{
+// private:
+//   int i;
+// public:
+//   A(){
+//     i = 10;
+//   }
+//   virtual void fun(){
+//     cout<<"Hello"<<endl;
+//   }
+// };
+// class B:public A
+// {
+
+// };
+// typedef   void   (A::*Fun)(); 
+
+// int main(int argv, char* args[])
+// {
+//   A a;
+//   Fun f;
+//   int *p = (int*)&a;
+//   cout<<hex<<*p<<endl;
+//   cout<<dec<<*(p+1)<<endl;
+//   B b;
+//   p = (int*)&b;
+//   cout<<hex<<*p<<endl;
+//   cout<<dec<<*(p+1)<<endl;
+//   return 0;
+// }
+class A
+{
 public:
-  A(){
-    i = 10;
-  }
   virtual void fun(){
-    cout<<"Hello"<<endl;
+    cout<<"A"<<endl;
   }
 };
+
 class B:public A
 {
-  
+public:
+  virtual void fun(){
+    cout<<"B"<<endl;
+  }
 };
-typedef   void   (A::*Fun)(); 
 
 int main(int argv, char* args[])
 {
-  A a;
-  Fun f;
-  int *p = (int*)&a;
-  cout<<hex<<*p<<endl;
-  cout<<dec<<*(p+1)<<endl;
-  B b;
-  p = (int*)&b;
-  cout<<hex<<*p<<endl;
-  cout<<dec<<*(p+1)<<endl;
+  cout<<sizeof(A)<<endl;
+  cout<<sizeof(B)<<endl;
   return 0;
 }
