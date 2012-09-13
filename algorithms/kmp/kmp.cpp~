@@ -1,0 +1,37 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:    kmp.cpp
+ *       Author:      linwei
+ *       E-mail:      kinglw8729@gmail.com
+ *       Created:     2012-09-12 15:35:17
+ *       Last Edit:   
+ *       Compiler:    gcc
+ *       Description: 
+ * =====================================================================================
+ */
+#include <iostream>
+#include <assert.h>
+using namespace std;
+
+int* compute_prefix_function(const int *p, int *pi, int m)
+{
+  int k;
+  int q;
+  assert(p&&pi);
+  k = 0;
+  pi[0] = 0;
+  for(q = 2; q <= m; ++q){
+    do{
+      pi[k] = k;
+      if(p[k+1] == p[q]){
+	++k;
+      }
+      pi[q] = k;
+    }while(k>0&&p[k+1]!=p[q]);
+  }
+  return pi;
+}
+
+
+
