@@ -1,0 +1,22 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:    first_socket.c
+ *       Author:      linwei
+ *       E-mail:      kinglw8729@gmail.com
+ *       Created:     2012-09-15 10:51:32
+ *       Last Edit:   
+ *       Compiler:    gcc
+ *       Description: 
+ * =====================================================================================
+ */
+#include <sys/socket.h>
+#include <netdb.h>
+
+main(int argv, char* args[])
+{
+  int sockfd = -1;
+  sockfd = socket(AF_INET, SOCK_STREAM, 0);
+  close(sockfd);
+  printf("%s\n",
+}

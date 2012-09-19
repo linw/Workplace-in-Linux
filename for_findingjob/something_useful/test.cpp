@@ -33,6 +33,7 @@ int main()
   cout<<"Test start=================================\n";
   a = test();
   cout<<"Test end===================================\n";
+  cout<<3*2/5<<endl;
   return 0;
 }
 // #include <iostream>
