@@ -31,6 +31,9 @@ public:
     cout<<"B pp"<<endl;
   }
 };
+
+
+
 union {
   unsigned int i;
   unsigned char a;

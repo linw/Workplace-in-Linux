@@ -7,6 +7,7 @@
  *
  */
 #include <iostream>
+#include <assert.h>
 #include "limits.h"
 using namespace std;
 //array[p,q] and array[q+1,r] already sorted, so merge
@@ -18,6 +19,7 @@ void Merge(int *array, size_t p, size_t q, size_t r){
    size_t n2 = r - q;
    int *L = new int[n1+1];
    int *R = new int[n2+1];
+   assert(array);
    for(i = 0; i != n1; ++i)
        L[i] = array[p+i];
    for(i = 0; i != n2; ++i)

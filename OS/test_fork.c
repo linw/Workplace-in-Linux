@@ -35,15 +35,25 @@ int data[100];
 main(int argv, char* args[])
 {
   int pid;
-  int data[100];
-  pid = fork();
-  if(pid < 0){
-    printf("Error!\n");
+  int i;
+  for(i = 0; i < 2; ++i){
+    pid = fork();
+    //    printf("-");
+    if(pid == 0){
+      printf("father process pid = %d, ppid = %d, i = %d\n", getpid(), getppid(), i);
+    } else {
+      printf("child process pid = %d, ppid = %d, i = %d\n", getpid(), getppid(), i);
+    }    
   }
-  else if( pid == 0){
-    printf("child process!\n");
-  }
-  else {
-    printf("parent process, child process pid is: %d\n",pid);
-  }
+  /* int data[100]; */
+  /* pid = fork(); */
+  /* if(pid < 0){ */
+  /*   printf("Error!\n"); */
+  /* } */
+  /* else if( pid == 0){ */
+  /*   printf("child process!\n"); */
+  /* } */
+  /* else { */
+  /*   printf("parent process, child process pid is: %d\n",pid); */
+  /* } */
 }

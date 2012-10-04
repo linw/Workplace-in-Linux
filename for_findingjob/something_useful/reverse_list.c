@@ -11,6 +11,7 @@
  * =====================================================================================
  */
 #include <stdio.h>
+#include <assert.h>
 typedef struct Node{
   int data;
   struct Node* next;
@@ -18,6 +19,7 @@ typedef struct Node{
 
 Node* reverse(Node* root)
 {
+  assert(root);
   Node* current;
   Node* pre;
   Node* nex;
@@ -59,6 +61,19 @@ main(int argv, char* args[])
     printf("%d ",p->data);
     p = p->next;
   }
+  printf("%d\n",EOF);
+  try{
+    int *kkk = new int[-1];
+  }
+  catch(...){
+    printf("Error!\n");
+  }
+  printf("main finish\n");
+  /* int *tt = new int[-1]; */
+  /* if(NULL == tt){ */
+  /*   printf("error!\n"); */
+  /* } */
+  /* getchar(); */
 }
 
 

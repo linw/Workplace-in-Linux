@@ -1,0 +1,5 @@
+#include <stdio.h>
+typedef struct Color{
+  char r;
+  char g;
+  char b;
