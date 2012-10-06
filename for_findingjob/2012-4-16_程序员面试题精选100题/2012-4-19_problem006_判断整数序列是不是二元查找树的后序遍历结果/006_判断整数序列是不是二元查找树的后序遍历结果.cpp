@@ -16,43 +16,43 @@
 using namespace std;
 typedef struct BiNode
 {
-    int data;
-    BiNode* left;
-    BiNode* right;
+  int data;
+  BiNode* left;
+  BiNode* right;
 }BiNode,*Tree;
 static int n_lin = 0;
 void create_tree(Tree& root){
-    int i;
-    cin>>i;
-    if(i == -1) root = NULL;
-    else{
-        root = new BiNode;
-        root->data = i;
-        create_tree(root->left);
-        create_tree(root->right);
-    }
-    return;
+  int i;
+  cin>>i;
+  if(i == -1) root = NULL;
+  else{
+    root = new BiNode;
+    root->data = i;
+    create_tree(root->left);
+    create_tree(root->right);
+  }
+  return;
 }
 
 void destory_tree(Tree& root){
-    if(root == NULL) return;
-    else {
-        destory_tree(root->left);
-        destory_tree(root->right);
-        delete root;
-        root = NULL;
-    }
+  if(root == NULL) return;
+  else {
+    destory_tree(root->left);
+    destory_tree(root->right);
+    delete root;
+    root = NULL;
+  }
 }
 
 void print_tree(const Tree& root){
-    if(root == NULL) {if(n_lin > 0)n_lin--;return ;}
-    n_lin++;
-    int i = 0;
-    while(i++<n_lin)
-        cout<<" ";
-    cout<<root->data<<endl;
-    print_tree(root->left);
-    print_tree(root->right);
+  if(root == NULL) {if(n_lin > 0)n_lin--;return ;}
+  n_lin++;
+  int i = 0;
+  while(i++<n_lin)
+    cout<<" ";
+  cout<<root->data<<endl;
+  print_tree(root->left);
+  print_tree(root->right);
 }
 
 
@@ -87,15 +87,15 @@ bool verify_squence_of_BST(int squence[],int length){
 
 int main()
 {
-    Tree root = NULL;
-    //    create_tree(root);
-    int a[] = {5,7,6,9,11,10,8};
-    int i = 0;
-    if(verify_squence_of_BST(a,7))
-       cout<<"yes"<<endl;
-    // bool flag = verify_squence_of_BST(a,root,3,i);
-    // if(flag) cout<<"hello world"<<endl;
-    //    print_tree(root);
-    //    destory_tree(root);
-    return 0;
+  Tree root = NULL;
+  // create_tree(root);
+  int a[] = {5,7,6,9,11,10,8};
+  int i = 0;
+  if(verify_squence_of_BST(a,7))
+    cout<<"yes"<<endl;
+  // bool flag = verify_squence_of_BST(a,root,3,i);
+  // if(flag) cout<<"hello world"<<endl;
+  //    print_tree(root);
+  //    destory_tree(root);
+  return 0;
 }
