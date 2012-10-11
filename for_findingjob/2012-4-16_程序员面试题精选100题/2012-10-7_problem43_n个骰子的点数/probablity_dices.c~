@@ -1,0 +1,17 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:    probablity_dices.c
+ *       Author:      linwei
+ *       E-mail:      kinglw8729@gmail.com
+ *       Created:     2012-10-07 20:49:19
+ *       Last Edit:   
+ *       Compiler:    gcc
+ *       Description: 
+ * =====================================================================================
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
